@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ContactForm from './components/Contactform'; // Import ContactForm
 
 // Import carousel images
 import carousel1 from './assets/carousel1.png';
@@ -30,7 +31,14 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <div className="container my-5" style={{ paddingTop: '80px', fontFamily: 'Poppins, sans-serif' }}>
+            <div
+                className="container my-5"
+                style={{
+                    paddingTop: '80px',
+                    fontFamily: 'Poppins, sans-serif',
+                    backgroundColor: '#e0f7fa' // Very light blue color
+                }}
+            >
                 {/* Carousel Section */}
                 <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">
@@ -81,38 +89,7 @@ const Home = () => {
 
                 {/* Contact Section */}
                 <h2 id="contact" className="mt-5 text-center">Contact Us</h2>
-                <form onSubmit={handleSubmit} className="mx-auto" style={{ maxWidth: '600px' }}>
-                    <div className="mb-3">
-                        <label className="form-label">Name</label>
-                        <input
-                            type="text"
-                            className="form-control"
-                            value={formData.name}
-                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                            required
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <label className="form-label">Email</label>
-                        <input
-                            type="email"
-                            className="form-control"
-                            value={formData.email}
-                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                            required
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <label className="form-label">Message</label>
-                        <textarea
-                            className="form-control"
-                            value={formData.message}
-                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                            required
-                        ></textarea>
-                    </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
-                </form>
+                <ContactForm formData={formData} handleSubmit={handleSubmit} setFormData={setFormData} /> {/* Use ContactForm */}
             </div>
             <Footer />
         </>
