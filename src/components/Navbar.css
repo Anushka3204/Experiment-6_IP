@@ -1,0 +1,8 @@
+/* Navbar.css */
+.navbar-nav .nav-link {
+    margin-right: 1rem; /* Space between links */
+}
+
+.navbar-brand {
+    font-weight: bold; /* Make the brand name bold */
+}

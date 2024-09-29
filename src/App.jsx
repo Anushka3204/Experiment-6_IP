@@ -1,29 +1,19 @@
 import React from 'react';
-import Navbar from './components/NavbarComponent';
-import Carousel from './components/Carousel';
-import About from './components/About';
-import Programs from './components/Programs';
-import Testimonials from './components/Testimonials';
-import Counter from './components/Counter';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import './components/index.css'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import Learn from './Learn'; // Make sure this path is correct
+import Navbar from './components/Navbar'; // Assuming you have a Navbar component
 
-function App() {
-  return (
-    <div>
-      <Navbar />
-      <Carousel />
-      <About />
-      <Programs />
-      <Testimonials />
-      <Counter />
-      <FAQ />
-      <Contact />
-      <Footer />
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <Router>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/learn" element={<Learn />} />
+            </Routes>
+        </Router>
+    );
+};
 
 export default App;

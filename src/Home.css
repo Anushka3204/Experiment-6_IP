@@ -1,0 +1,55 @@
+.teal-text {
+    color: #110b7d;
+
+}
+
+.btn-teal {
+    background-color: #110b7d;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn-teal:hover {
+    background-color: #110b7d;
+    transform: scale(1.05);
+}
+
+.program-card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form {
+    max-width: 600px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.shadow-lg {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-sm {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img {
+    object-fit: cover; /* This ensures the images cover the area without distortion */
+    height: 600px; /* Set a height for the carousel */
+}
+
+.carousel-item img {
+    object-fit: cover; /* Ensures that images fill the container without stretching */
+    height: 600px; /* Adjust height as needed */
+    width: 100px0; /* Ensures full width */
+}
+
+body{
+    background-color: rgb(168, 211, 221);
+}
