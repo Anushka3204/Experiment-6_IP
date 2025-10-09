@@ -1,10 +1,16 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* #root {
+  width: 100vw;
+  margin: 0 ;
+  background-color: rgb(168, 211, 221);
   text-align: center;
-}
+} */
 
+html, body {
+  margin: 0;
+  padding-left: 30px  !important; 
+  background-color: #e0f7fa;
+  overflow-x: hidden; /* optional – prevents horizontal scrollbars */
+}
 .logo {
   height: 6em;
   padding: 1.5em;
