@@ -32,11 +32,11 @@ const Home = () => {
         <>
             <Navbar />
             <div
-                className="container my-5"
+                className=" py-5"
                 style={{
                     paddingTop: '80px',
                     fontFamily: 'Poppins, sans-serif',
-                    backgroundColor: '#e0f7fa' // Very light blue color
+                    backgroundColor: '#e0f7fa' 
                 }}
             >
                 {/* Carousel Section */}
@@ -73,7 +73,7 @@ const Home = () => {
 
                 {/* Programs Section */}
                 <h2 id="programs" className="mt-5 text-center">Our Programs</h2>
-                <div className="row">
+                <div className="row px-5">
                     {programs.map((program) => (
                         <div className="col-md-4 mb-3" key={program.id}>
                             <div className="card text-center">
